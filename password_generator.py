@@ -2,8 +2,9 @@
 
 import random
 import string
+import sys
 
 charecters = string.ascii_letters + string.digits + string.punctuation
-password_length = 16 # set password length here
+password_length = int(sys.argv[1]) if sys.argv[1] else 16
 password = "".join(random.sample(charecters, password_length))
 print(password)
